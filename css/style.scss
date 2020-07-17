@@ -1,0 +1,279 @@
+@import"__variable";
+@import"__default";
+
+%transition{
+		
+		-moz-transition: all 0.3s ease;
+    	-o-transition: all 0.3s ease;
+    	-webkit-transition: all 0.3s ease;
+}
+
+@mixin radious($value){
+	border-radius:$value;
+}
+
+@mixin shadow($x, $y, $blur){
+	-webkit-box-shadow: $x $y $blur #0000001a;
+	box-shadow: $x $y $blur #0000001a;
+}
+
+%btn{
+				font-size:19px;
+				font-weight: 400;
+				letter-spacing: 1px;
+				@include radious(30px);
+    			padding: 7px 25px;
+    			@extend %transition;
+}
+
+
+
+
+
+header{
+	background-color: $bgcolor;
+
+	.navbar-brand{
+		img{
+			width: 200px;
+		}
+	}
+
+	.navbar-nav{
+
+
+
+		.nav-item{
+						
+			.nav-link{
+
+				color: $color1;
+				@extend %btn; 
+				   			
+				&:hover	{
+					color:white;
+					background-color:$color2; 
+						}
+
+					}
+					
+		
+
+		&:last-child{
+
+			   .nav-link{
+				         color:white;
+			             background-color:$color2; 
+
+				        }
+					
+			    }
+			}
+	
+		}
+
+		.row{
+
+			padding: 20px 0;
+
+			h4{
+				color: red;
+				font-size: 20px;
+			}
+			h1{
+				color: $color1;
+				font-size: 70px;
+				font-weight: 600;
+				line-height: 1.1;
+				
+				span{
+
+					color: $color2;
+				}
+			}
+			p{
+				opacity: 0.7;
+   				font-size: 18px;
+    			line-height: 1.8;
+    			color: $color1;
+
+			}
+
+		}
+	} 
+
+
+	.btn-custom{
+		background-color: $color2;
+		color: white;
+		@extend %btn;
+		border: 2px solid $color2 ;
+
+		&:hover	{
+					color:$color2;
+					background-color:transparent; 
+						}
+	}
+
+
+
+
+
+.book-section{
+
+	.row{
+		
+
+		.book{
+			background-color: $bgcolor;
+			padding: 12px;
+			text-align: center;
+			padding: 35px 20px;
+			@include radious(10px);
+			
+
+
+			&:hover	{
+					background-color:white; 
+					@include shadow(0, 20px, 40px);
+					@extend %transition;
+						}
+
+
+
+
+			img{
+				height: 80px;
+			}
+			h2{
+				font-weight: 700;
+				font-size: 26px;
+				margin: 10px 0 0;
+			}
+			p{
+				opacity: 0.7;
+   				font-size: 18px;
+    			line-height: 1.8;
+    			color: $color1;
+    			margin: 0;
+			}
+		}
+	}
+}
+
+
+.heading{
+	text-align: center;
+	padding: 50px 0;
+	h1{
+		font-size: 45px;
+		font-weight: 900;
+		letter-spacing: 1px;
+		
+	}
+}
+
+
+.courses-section{
+	.row{
+		.card-custom{
+			@include radious(10px);
+			@include shadow(0, 20px, 40px);
+			border: 0;
+			
+			.card-body{
+				
+				img{
+					@include radious(10px);
+				}
+				.card-title{
+					font-size: 26px;
+   					margin: 15px 0;
+				}
+				.card-text{
+					opacity: 0.7;
+   					font-size: 18px;
+    				line-height: 1.8;
+    				color: $color1;
+    				margin: 0;
+    				margin-bottom: 10px;
+				}
+
+				.nav{
+					align-items: center;
+
+					li{
+                         margin-top: 20px;
+
+						img{
+							width: 20px;
+							margin-bottom: 10px;
+						}
+						span{
+							font-weight: 500;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+.testimonial-section{
+	padding: 50px 0;
+	img{}
+	p{
+		
+   		font-size: 18px;
+    	color: $color1;
+    	margin: 0;
+	}
+}
+
+
+footer{
+	background-color: #282531;
+	color: white;
+	padding: 30px 0 10px;
+	.row{
+		p{}
+		h3{
+			font-size: 20px;}
+		.list-unstyled{
+			li{
+				a{
+					    color: #ffffff;
+    					font-size: 16px;
+    					text-decoration: none;
+    					background-color: transparent;
+    					display: block;
+    					padding: 5px 0;
+    					@extend %transition;
+
+    					&:hover	{
+    						opacity:0.8;
+
+
+					
+						}
+				}
+			}
+		}
+	}
+
+.copyright{
+	padding:30px 0 0;
+	text-align: center;
+	p{
+		margin-bottom: 0;
+		font-size: 15px;
+        
+        font-weight: 800;
+	}
+}
+
+}
